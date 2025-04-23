@@ -19,7 +19,7 @@
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -27,53 +27,67 @@
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
+  <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-film w3-xxlarge"></i>
+    <p>PORTFOLIO</p>
+  </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
 </nav>
 
-<!-- Page Content -->
+<!-- Main content -->
 <div class="w3-padding-large" id="main">
-  <!-- Header -->
+  <!-- Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Emir Alhariri.</h1>
-    <p>Filmmaker & Media Creator</p>
+    <h1 class="w3-jumbo">Emir Alhariri</h1>
+    <p>Filmmaker & Media Creator – <a href="mailto:alhaririemir@gmail.com" class="w3-text-teal">alhaririemir@gmail.com</a></p>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">About Me</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>
-      I’m a media creator passionate about filmmaking and visual media. Currently studying Audio and Video Media Production at Howard Community College, I’m transferring to Towson University for a degree in Electronic Media and Film.
-    </p>
-    <p>
-      With experience in production, videography, and editing, I’ve worked on commercial, news, and independent projects as a production assistant, camera assistant, and freelance filmmaker. Growing up across Norway, Saudi Arabia, England, and Bahrain shaped my global perspective, and I use film to connect with people and explore different stories.
-    </p>
-    <p>
-      I honed my craft during a gap year at a Folkehøgskole in Norway, focusing on hands-on media production and traveling for industry insights.
-    </p>
-    <p>
-      Let’s connect—I’m always open to new opportunities in media production and creative collaboration!
-    </p>
+    <p>I’m a media creator passionate about filmmaking and visual media. Currently studying Audio and Video Media Production at Howard Community College, I’m transferring to Towson University for a degree in Electronic Media and Film.</p>
+    <p>With experience in production, videography, and editing, I’ve worked on commercial, news, and independent projects as a production assistant, camera assistant, and freelance filmmaker. Growing up across Norway, Saudi Arabia, England, and Bahrain shaped my global perspective, and I use film to connect with people and explore different stories.</p>
+    <p>I honed my craft during a gap year at a Folkehøgskole in Norway, focusing on hands-on media production and traveling for industry insights.</p>
+    <p>Let’s connect—I’m always open to new opportunities in media production and creative collaboration!</p>
+    <a href="Emir F. Alhariri - Resume .pdf" download class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </a>
   </div>
 
-  <!-- Contact Section -->
+  <!-- Portfolio -->
+  <div class="w3-padding-64 w3-content" id="portfolio">
+    <h2 class="w3-text-light-grey">Portfolio</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/vdfG4Zg7Hww" frameborder="0" allowfullscreen></iframe>
+        <h4 class="w3-text-white">Carpie Diem</h4>
+      </div>
+      <div class="w3-half w3-margin-bottom">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/eqM_UiJUdAQ" frameborder="0" allowfullscreen></iframe>
+        <h4 class="w3-text-white">The Human Mosaic</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Me</h2>
     <hr style="width:200px" class="w3-opacity">
     <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> DMV</p>
-    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> alhaririemir@gmail.com</p>
+    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> alhaririemir@gmail.com</p>
     <br>
-    <p>Let’s get in touch. Send me a message:</p>
     <form action="mailto:alhaririemir@gmail.com" method="post" enctype="text/plain">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
@@ -81,9 +95,9 @@
 
   <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-youtube w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.instagram.com/emiralhariri/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.youtube.com/@scenesbyemir" target="_blank"><i class="fa fa-youtube-play w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/emiralhariri/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   </footer>
 </div>

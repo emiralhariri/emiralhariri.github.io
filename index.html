@@ -13,6 +13,32 @@
     .w3-sidebar {width: 120px;background: #222;}
     #main {margin-left: 120px}
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+    /* Banner background */
+    #home {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    /* Headshot styling */
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-top: -80px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Larger social icons */
+    footer i {
+      font-size: 36px;
+      margin-right: 16px;
+    }
   </style>
 </head>
 <body class="w3-black">
@@ -40,9 +66,12 @@
 <!-- Main content -->
 <div class="w3-padding-large" id="main">
   <!-- Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo">Emir Alhariri</h1>
-    <p>Filmmaker & Media Creator – <a href="mailto:alhaririemir@gmail.com" class="w3-text-teal">alhaririemir@gmail.com</a></p>
+  <header class="w3-container w3-center w3-black" id="home">
+    <img src="headshot.jpg" alt="Emir Alhariri" class="profile-pic">
+    <h1 class="w3-jumbo w3-text-white">Emir Alhariri</h1>
+    <p class="w3-large">Filmmaker & Media Creator –
+      <a href="mailto:alhaririemir@gmail.com" class="w3-text-teal">alhaririemir@gmail.com</a>
+    </p>
   </header>
 
   <!-- About -->
@@ -78,19 +107,8 @@
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Me</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> DMV</p>
+    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Washington DC–Baltimore Area</p>
     <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> alhaririemir@gmail.com</p>
-    <br>
-    <form action="mailto:alhaririemir@gmail.com" method="post" enctype="text/plain">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
   </div>
 
   <!-- Footer -->
@@ -98,7 +116,7 @@
     <a href="https://www.instagram.com/emiralhariri/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <a href="https://www.youtube.com/@scenesbyemir" target="_blank"><i class="fa fa-youtube-play w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com/in/emiralhariri/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <a href="https://www.tiktok.com/@scenesbyemir?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa fa-music w3-hover-opacity"></i></a>
   </footer>
 </div>
 

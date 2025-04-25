@@ -5,24 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emir Alhariri – Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       background-color: #111;
       color: white;
       transition: background 0.3s, color 0.3s;
     }
 
-    .light-mode {
-      background-color: #f4f4f4;
-      color: #111;
-    }
-
     .sidebar {
       width: 120px;
-      background: #222;
+      background: #1a1a1a;
       position: fixed;
       height: 100%;
       text-align: center;
@@ -34,10 +29,16 @@
       padding: 20px 0;
       color: white;
       text-decoration: none;
+      font-size: 14px;
     }
 
     .sidebar a:hover {
-      background-color: #555;
+      background-color: #333;
+    }
+
+    .sidebar i {
+      font-size: 24px;
+      margin-bottom: 5px;
     }
 
     .main {
@@ -51,17 +52,32 @@
     }
 
     .profile-pic {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
       border-radius: 50%;
       border: 5px solid white;
       margin-bottom: 20px;
     }
 
+    #resume-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #resume-button:hover {
+      background-color: #666;
+    }
+
     .filter-buttons {
       text-align: center;
-      margin-bottom: 30px;
+      margin: 30px 0 20px;
     }
 
     .filter-buttons button {
@@ -71,6 +87,8 @@
       cursor: pointer;
       background-color: #333;
       color: white;
+      font-size: 13px;
+      border-radius: 3px;
     }
 
     .filter-buttons button:hover {
@@ -78,61 +96,47 @@
     }
 
     .video-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .video-box {
-      width: 100%;
-      max-width: 500px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 10px;
     }
 
     .video-box iframe {
       width: 100%;
-      height: 280px;
+      height: 240px;
+      border: none;
     }
 
     .video-desc {
-      margin-top: 8px;
-      font-size: 0.95em;
+      margin-top: 10px;
+      font-size: 0.9em;
       color: #ccc;
     }
 
-    footer {
-      padding: 40px 20px;
+    #contact {
+      background-color: #181818;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .social-icons a {
-      font-size: 28px;
-      margin: 0 10px;
+      font-size: 32px;
+      margin: 0 15px;
       color: white;
     }
 
     .social-icons a:hover {
       color: #1da1f2;
     }
-
-    .toggle-mode {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-    }
   </style>
 </head>
 <body>
-  <div class="toggle-mode">
-    <button onclick="toggleMode()">Toggle Light/Dark</button>
-  </div>
-
   <nav class="sidebar">
-    <a href="#home"><i class="fas fa-home fa-2x"></i><p>HOME</p></a>
-    <a href="#about"><i class="fas fa-user fa-2x"></i><p>ABOUT</p></a>
-    <a href="#portfolio"><i class="fas fa-film fa-2x"></i><p>PORTFOLIO</p></a>
-    <a href="#contact"><i class="fas fa-envelope fa-2x"></i><p>CONTACT</p></a>
+    <a href="#home"><i class="fas fa-home"></i><p>Home</p></a>
+    <a href="#about"><i class="fas fa-user"></i><p>About</p></a>
+    <a href="#portfolio"><i class="fas fa-film"></i><p>Work</p></a>
+    <a href="#contact"><i class="fas fa-envelope"></i><p>Contact</p></a>
   </nav>
 
   <div class="main">
@@ -140,6 +144,7 @@
       <img src="headshot.jpg" alt="Emir Alhariri" class="profile-pic">
       <h1>Emir Alhariri</h1>
       <p>Filmmaker & Media Creator</p>
+      <a href="Emir F. Alhariri - Resume .pdf" target="_blank"><button id="resume-button">View Resume</button></a>
     </header>
 
     <section id="about">
@@ -157,9 +162,7 @@
         <button onclick="filterVideos('narrative')">Narrative</button>
         <button onclick="filterVideos('sound')">Sound Design</button>
       </div>
-      <div class="video-section" id="videos">
-        <!-- Portfolio videos will be injected here with JS -->
-      </div>
+      <div class="video-section" id="videos"></div>
     </section>
 
     <section id="contact">
@@ -176,25 +179,18 @@
   </div>
 
   <script>
-    function toggleMode() {
-      document.body.classList.toggle("light-mode");
-    }
-
     const videos = [
-      // Corporate
       { link: "https://www.youtube.com/embed/AArYhLtPgXM", desc: "An instructional video I edited to guide employees on how to effectively use Salesforce.", type: "corporate" },
       { link: "https://www.youtube.com/embed/ALQMVbNb8Co", desc: "A corporate-style interview highlighting key insights and perspectives about the company.", type: "corporate" },
       { link: "https://www.youtube.com/embed/YZjce4yhHPE", desc: "A timelapse capturing the progress and transformation of the project from start to finish.", type: "corporate" },
       { link: "https://www.youtube.com/embed/AjBUYXoFWSo", desc: "A promotional teaser created for a client to build anticipation for an upcoming event.", type: "corporate" },
 
-      // Narrative
       { link: "https://www.youtube.com/embed/Zn1w953_mZA", desc: "Shot during my time studying in Norway, this was a fast-paced collaborative project set in a local bar, highlighting our ability to plan and execute under time constraints.", type: "narrative" },
       { link: "https://www.youtube.com/embed/2n3UkWppLrk", desc: "A fast-paced promotional montage created for a friend’s clothing brand, showcasing style, energy, and visual flair.", type: "narrative" },
       { link: "https://www.youtube.com/embed/vdfG4Zg7Hww", desc: "A reflective short film exploring the overlooked moments and small details a character fails to appreciate—until they’re gone.", type: "narrative" },
       { link: "https://www.youtube.com/embed/eswpazPrw6k", desc: "A stylized video illustrating the addictive nature of social media and its impact on attention span—drawing parallels to the fragmented focus of a fish brain in a digital world.", type: "narrative" },
       { link: "https://www.youtube.com/embed/eqM_UiJUdAQ", desc: "A visual montage following a lead character through a tapestry of faces and locations, capturing emotion, connection, and movement across space and time.", type: "narrative" },
 
-      // Sound Design
       { link: "https://www.youtube.com/embed/Kc5XzxwwoDo", desc: "Designed the soundscape for a T-Rex in a cinematic, atmospheric environment—layering footsteps, growls, and ambient textures to enhance tension and immersion.", type: "sound" },
       { link: "https://www.youtube.com/embed/K4uYqEATpUI", desc: "Created detailed mechanical sounds to bring a robot assembly sequence to life—featuring layered servo whirs, metallic clanks, and rhythmic machinery.", type: "sound" },
       { link: "https://www.youtube.com/embed/D2lK5Ov3fRU", desc: "Independent sound design practice on a BIFSC short film, portraying nature consuming the planet and starting anew. Focused on capturing the cycle of collapse and rebirth through organic textures and atmospheric layers.", type: "sound" }
@@ -206,8 +202,8 @@
       const filtered = filter === 'all' ? videos : videos.filter(v => v.type === filter);
       filtered.forEach(video => {
         container.innerHTML += `
-          <div class="video-box ${video.type}">
-            <iframe src="${video.link}" frameborder="0" allowfullscreen></iframe>
+          <div class="video-box">
+            <iframe src="${video.link}" allowfullscreen></iframe>
             <div class="video-desc">${video.desc}</div>
           </div>
         `;

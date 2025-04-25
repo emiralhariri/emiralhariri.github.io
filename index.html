@@ -1,124 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emir Alhariri – Portfolio</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
   <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    .w3-sidebar {width: 120px;background: #222;}
-    #main {margin-left: 120px}
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-
-    /* Banner background */
-    #home {
-      background: url('banner.jpg') no-repeat center center;
-      background-size: cover;
-      position: relative;
-      padding-top: 100px;
-      padding-bottom: 100px;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: white;
+      transition: background 0.3s, color 0.3s;
     }
 
-    /* Headshot styling */
+    .light-mode {
+      background-color: #f4f4f4;
+      color: #111;
+    }
+
+    .sidebar {
+      width: 120px;
+      background: #222;
+      position: fixed;
+      height: 100%;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 20px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+
+    .main {
+      margin-left: 120px;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
     .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      margin-top: -80px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 20px;
     }
 
-    /* Larger social icons */
-    footer i {
-      font-size: 36px;
-      margin-right: 16px;
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .filter-buttons button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #555;
+    }
+
+    .video-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-box {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .video-box iframe {
+      width: 100%;
+      height: 280px;
+    }
+
+    .video-desc {
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: #ccc;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      font-size: 28px;
+      margin: 0 10px;
+      color: white;
+    }
+
+    .social-icons a:hover {
+      color: #1da1f2;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
     }
   </style>
 </head>
-<body class="w3-black">
-
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-film w3-xxlarge"></i>
-    <p>PORTFOLIO</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
-
-<!-- Main content -->
-<div class="w3-padding-large" id="main">
-  <!-- Home -->
-  <header class="w3-container w3-center w3-black" id="home">
-    <img src="headshot.jpg" alt="Emir Alhariri" class="profile-pic">
-    <h1 class="w3-jumbo w3-text-white">Emir Alhariri</h1>
-    <p class="w3-large">Filmmaker & Media Creator –
-      <a href="mailto:alhaririemir@gmail.com" class="w3-text-teal">alhaririemir@gmail.com</a>
-    </p>
-  </header>
-
-  <!-- About -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>I’m a media creator passionate about filmmaking and visual media. Currently studying Audio and Video Media Production at Howard Community College, I’m transferring to Towson University for a degree in Electronic Media and Film.</p>
-    <p>With experience in production, videography, and editing, I’ve worked on commercial, news, and independent projects as a production assistant, camera assistant, and freelance filmmaker. Growing up across Norway, Saudi Arabia, England, and Bahrain shaped my global perspective, and I use film to connect with people and explore different stories.</p>
-    <p>I honed my craft during a gap year at a Folkehøgskole in Norway, focusing on hands-on media production and traveling for industry insights.</p>
-    <p>Let’s connect—I’m always open to new opportunities in media production and creative collaboration!</p>
-    <a href="Emir F. Alhariri - Resume .pdf" download class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> Download Resume
-    </a>
+<body>
+  <div class="toggle-mode">
+    <button onclick="toggleMode()">Toggle Light/Dark</button>
   </div>
 
-  <!-- Portfolio -->
-  <div class="w3-padding-64 w3-content" id="portfolio">
-    <h2 class="w3-text-light-grey">Portfolio</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/vdfG4Zg7Hww" frameborder="0" allowfullscreen></iframe>
-        <h4 class="w3-text-white">Carpie Diem</h4>
+  <nav class="sidebar">
+    <a href="#home"><i class="fas fa-home fa-2x"></i><p>HOME</p></a>
+    <a href="#about"><i class="fas fa-user fa-2x"></i><p>ABOUT</p></a>
+    <a href="#portfolio"><i class="fas fa-film fa-2x"></i><p>PORTFOLIO</p></a>
+    <a href="#contact"><i class="fas fa-envelope fa-2x"></i><p>CONTACT</p></a>
+  </nav>
+
+  <div class="main">
+    <header id="home">
+      <img src="headshot.jpg" alt="Emir Alhariri" class="profile-pic">
+      <h1>Emir Alhariri</h1>
+      <p>Filmmaker & Media Creator</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m a media creator passionate about filmmaking and visual media. Currently studying Audio and Video Media Production at Howard Community College, I’m transferring to Towson University for a degree in Electronic Media and Film.</p>
+      <p>I’ve worked on commercial, news, and independent projects as a production assistant, camera assistant, and freelance filmmaker. Growing up across Norway, Saudi Arabia, England, and Bahrain shaped my global perspective, and I use film to connect with people and explore different stories.</p>
+      <p>I honed my craft during a gap year at a Folkehøgskole in Norway, focusing on hands-on media production and traveling for industry insights.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="filter-buttons">
+        <button onclick="filterVideos('all')">All</button>
+        <button onclick="filterVideos('corporate')">Corporate</button>
+        <button onclick="filterVideos('narrative')">Narrative</button>
+        <button onclick="filterVideos('sound')">Sound Design</button>
       </div>
-      <div class="w3-half w3-margin-bottom">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/eqM_UiJUdAQ" frameborder="0" allowfullscreen></iframe>
-        <h4 class="w3-text-white">The Human Mosaic</h4>
+      <div class="video-section" id="videos">
+        <!-- Portfolio videos will be injected here with JS -->
       </div>
-    </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-map-marker-alt"></i> Washington DC–Baltimore Area</p>
+      <p><i class="fas fa-envelope"></i> alhaririemir@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/emiralhariri/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@scenesbyemir" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/emiralhariri/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@scenesbyemir" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </section>
   </div>
 
-  <!-- Contact -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Washington DC–Baltimore Area</p>
-    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> alhaririemir@gmail.com</p>
-  </div>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
 
-  <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <a href="https://www.instagram.com/emiralhariri/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="https://www.youtube.com/@scenesbyemir" target="_blank"><i class="fa fa-youtube-play w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/emiralhariri/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <a href="https://www.tiktok.com/@scenesbyemir?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa fa-music w3-hover-opacity"></i></a>
-  </footer>
-</div>
+    const videos = [
+      // Corporate
+      { link: "https://www.youtube.com/embed/AArYhLtPgXM", desc: "An instructional video I edited to guide employees on how to effectively use Salesforce.", type: "corporate" },
+      { link: "https://www.youtube.com/embed/ALQMVbNb8Co", desc: "A corporate-style interview highlighting key insights and perspectives about the company.", type: "corporate" },
+      { link: "https://www.youtube.com/embed/YZjce4yhHPE", desc: "A timelapse capturing the progress and transformation of the project from start to finish.", type: "corporate" },
+      { link: "https://www.youtube.com/embed/AjBUYXoFWSo", desc: "A promotional teaser created for a client to build anticipation for an upcoming event.", type: "corporate" },
 
+      // Narrative
+      { link: "https://www.youtube.com/embed/Zn1w953_mZA", desc: "Shot during my time studying in Norway, this was a fast-paced collaborative project set in a local bar, highlighting our ability to plan and execute under time constraints.", type: "narrative" },
+      { link: "https://www.youtube.com/embed/2n3UkWppLrk", desc: "A fast-paced promotional montage created for a friend’s clothing brand, showcasing style, energy, and visual flair.", type: "narrative" },
+      { link: "https://www.youtube.com/embed/vdfG4Zg7Hww", desc: "A reflective short film exploring the overlooked moments and small details a character fails to appreciate—until they’re gone.", type: "narrative" },
+      { link: "https://www.youtube.com/embed/eswpazPrw6k", desc: "A stylized video illustrating the addictive nature of social media and its impact on attention span—drawing parallels to the fragmented focus of a fish brain in a digital world.", type: "narrative" },
+      { link: "https://www.youtube.com/embed/eqM_UiJUdAQ", desc: "A visual montage following a lead character through a tapestry of faces and locations, capturing emotion, connection, and movement across space and time.", type: "narrative" },
+
+      // Sound Design
+      { link: "https://www.youtube.com/embed/Kc5XzxwwoDo", desc: "Designed the soundscape for a T-Rex in a cinematic, atmospheric environment—layering footsteps, growls, and ambient textures to enhance tension and immersion.", type: "sound" },
+      { link: "https://www.youtube.com/embed/K4uYqEATpUI", desc: "Created detailed mechanical sounds to bring a robot assembly sequence to life—featuring layered servo whirs, metallic clanks, and rhythmic machinery.", type: "sound" },
+      { link: "https://www.youtube.com/embed/D2lK5Ov3fRU", desc: "Independent sound design practice on a BIFSC short film, portraying nature consuming the planet and starting anew. Focused on capturing the cycle of collapse and rebirth through organic textures and atmospheric layers.", type: "sound" }
+    ];
+
+    function loadVideos(filter = 'all') {
+      const container = document.getElementById('videos');
+      container.innerHTML = '';
+      const filtered = filter === 'all' ? videos : videos.filter(v => v.type === filter);
+      filtered.forEach(video => {
+        container.innerHTML += `
+          <div class="video-box ${video.type}">
+            <iframe src="${video.link}" frameborder="0" allowfullscreen></iframe>
+            <div class="video-desc">${video.desc}</div>
+          </div>
+        `;
+      });
+    }
+
+    function filterVideos(type) {
+      loadVideos(type);
+    }
+
+    window.onload = () => loadVideos();
+  </script>
 </body>
 </html>

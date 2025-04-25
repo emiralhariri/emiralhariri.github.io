@@ -12,9 +12,7 @@
       margin: 0;
       background-color: #111;
       color: white;
-      transition: background 0.3s, color 0.3s;
     }
-
     .sidebar {
       width: 120px;
       background: #1a1a1a;
@@ -23,7 +21,6 @@
       text-align: center;
       padding-top: 20px;
     }
-
     .sidebar a {
       display: block;
       padding: 20px 0;
@@ -31,21 +28,17 @@
       text-decoration: none;
       font-size: 14px;
     }
-
     .sidebar a:hover {
       background-color: #333;
     }
-
     .sidebar i {
       font-size: 24px;
       margin-bottom: 5px;
     }
-
     .main {
       margin-left: 120px;
       padding: 20px;
     }
-
     @media (max-width: 768px) {
       .sidebar {
         width: 100%;
@@ -54,41 +47,29 @@
         display: flex;
         justify-content: space-around;
       }
-
       .sidebar a {
         padding: 10px;
         font-size: 12px;
       }
-
       .main {
         margin-left: 0;
         padding: 15px;
       }
-
       header {
         padding: 30px 10px;
       }
-
       .profile-pic {
         width: 160px;
         height: 160px;
       }
-
-      .video-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
       #contact {
         padding: 40px 15px;
       }
     }
-
     header {
       text-align: center;
       padding: 50px 20px 20px;
     }
-
     .profile-pic {
       width: 220px;
       height: 220px;
@@ -97,7 +78,6 @@
       border: 5px solid white;
       margin-bottom: 20px;
     }
-
     #resume-button {
       margin-top: 20px;
       padding: 10px 20px;
@@ -108,62 +88,36 @@
       font-size: 14px;
       cursor: pointer;
     }
-
     #resume-button:hover {
       background-color: #666;
     }
-
-    .filter-buttons {
+    .portfolio-links {
       text-align: center;
-      margin: 30px 0 20px;
+      margin: 40px 0;
     }
-
-    .filter-buttons button {
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      cursor: pointer;
+    .portfolio-links a {
+      display: inline-block;
+      margin: 10px 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      text-decoration: none;
       background-color: #333;
       color: white;
-      font-size: 13px;
-      border-radius: 3px;
+      border-radius: 4px;
     }
-
-    .filter-buttons button:hover {
+    .portfolio-links a:hover {
       background-color: #555;
     }
-
-    .video-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      padding: 10px;
-    }
-
-    .video-box iframe {
-      width: 100%;
-      height: 240px;
-      border: none;
-    }
-
-    .video-desc {
-      margin-top: 10px;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-
     #contact {
       background-color: #181818;
       padding: 60px 20px;
       text-align: center;
     }
-
     .social-icons a {
       font-size: 32px;
       margin: 0 15px;
       color: white;
     }
-
     .social-icons a:hover {
       color: #1da1f2;
     }
@@ -173,7 +127,7 @@
   <nav class="sidebar">
     <a href="#home"><i class="fas fa-home"></i><p>Home</p></a>
     <a href="#about"><i class="fas fa-user"></i><p>About</p></a>
-    <a href="#portfolio"><i class="fas fa-film"></i><p>Work</p></a>
+    <a href="#portfolio"><i class="fas fa-film"></i><p>Portfolio</p></a>
     <a href="#contact"><i class="fas fa-envelope"></i><p>Contact</p></a>
   </nav>
 
@@ -194,13 +148,11 @@
 
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <div class="filter-buttons">
-        <button onclick="filterVideos('all')">All</button>
-        <button onclick="filterVideos('corporate')">Corporate</button>
-        <button onclick="filterVideos('narrative')">Narrative</button>
-        <button onclick="filterVideos('sound')">Sound Design</button>
+      <div class="portfolio-links">
+        <a href="narrative.html">Narrative</a>
+        <a href="sound.html">Sound Design</a>
+        <a href="corporate.html">Corporate</a>
       </div>
-      <div class="video-section" id="videos"></div>
     </section>
 
     <section id="contact">
@@ -215,29 +167,5 @@
       </div>
     </section>
   </div>
-
-  <script>
-    const videos = [...]; // same video array from before
-
-    function loadVideos(filter = 'all') {
-      const container = document.getElementById('videos');
-      container.innerHTML = '';
-      const filtered = filter === 'all' ? videos : videos.filter(v => v.type === filter);
-      filtered.forEach(video => {
-        container.innerHTML += `
-          <div class="video-box">
-            <iframe src="${video.link}" allowfullscreen></iframe>
-            <div class="video-desc">${video.desc}</div>
-          </div>
-        `;
-      });
-    }
-
-    function filterVideos(type) {
-      loadVideos(type);
-    }
-
-    window.onload = () => loadVideos();
-  </script>
 </body>
 </html>

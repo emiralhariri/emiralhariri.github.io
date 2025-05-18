@@ -1,48 +1,69 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Emir Alhariri Portfolio</title>
-  <style>
-    body { font-family: Arial; margin: 0; padding: 0; background: #fff; color: #111; }
-    nav { background-color: #333; color: white; padding: 1em; text-align: center; }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emir Alhariri Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { background-color: #111; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+    nav { background-color: #1e1e1e; padding: 1em; text-align: center; }
     nav a { color: white; margin: 0 1em; text-decoration: none; }
     .hero-images { display: flex; width: 100%; }
-    .hero-images img { width: 50%; height: auto; display: block; }
-    .about { text-align: center; padding: 2em; }
-    .contact { padding: 2em; text-align: center; background: #f0f0f0; }
-    .contact-icons { font-size: 1.5em; margin-top: 1em; }
+    .hero-images img { width: 50%; height: auto; }
+    .about, .resume, .contact { text-align: center; padding: 2em; }
     .contact-images { display: flex; justify-content: center; gap: 1em; margin-top: 2em; }
     .contact-images img { width: 45%; height: auto; }
-  </style>
-</head>
+  
+@media (max-width: 768px) {
+  .hero-images { flex-direction: column; }
+  .hero-images img { width: 100%; }
+  .contact-images img { width: 100%; margin-bottom: 1em; }
+  .gallery img { width: 90% !important; }
+}
+
+nav {
+  background: none !important;
+}
+h1, h2 {
+  font-size: 34px !important;
+}
+</style>
+<title>Emir Frantzen Alhariri | Filmmaker &amp; Storyteller</title><meta content="Explore the creative portfolio of Emir Frantzen Alhariri, a filmmaker and storyteller specializing in narrative, corporate, and sound design productions." name="description"/><meta content="Emir Alhariri, filmmaker, video editor, cinematographer, Towson University, Howard Community College, portfolio, storytelling" name="keywords"/><meta content="Emir Frantzen Alhariri | Filmmaker &amp; Storyteller" property="og:title"/><meta content="Portfolio of filmmaker Emir Frantzen Alhariri. View narrative films, commercial work, sound design, and photography." property="og:description"/><meta content="https://emiralhariri.github.io/your-thumbnail.jpg" property="og:image"/><meta content="https://emiralhariri.github.io" property="og:url"/></head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="narrative.html">Narrative</a>
-    <a href="photos.html">Photos</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero-images">
-    <img src="images/EMIR-44.jpg" alt="Intro Photo 1">
-    <img src="images/EMIR-45.jpg" alt="Intro Photo 2">
-  </div>
-
-  <section class="about">
-    <h1>Emir Alhariri</h1>
-    <p>Filmmaker, visual storyteller, and media creative exploring narrative and documentary film through cinematography and editing.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>emiralhariri@gmail.com | @emiralhariri</p>
-    <div class="contact-images">
-      <img src="images/EMIR-46.jpg" alt="Contact Photo 1">
-      <img src="images/EMIR-47.jpg" alt="Contact Photo 2">
-    </div>
-  </section>
+<div class="hero-images">
+<img alt="Intro Photo 1" src="EMIR-44.jpg"/>
+<img alt="Intro Photo 2" src="EMIR-45.jpg"/>
+</div><h1 style="text-align:center;font-size:80px;font-weight:800;margin:1.2em 0;">Emir Frantzen Alhariri</h1>
+<section class="about"><h1 style="text-align:center;font-size:30px;margin-bottom:1em;">About Me</h1><p style="text-align:center;font-size:18px;line-height:1.8;max-width:800px;margin:0 auto 1.2em;">I'm a filmmaker and storyteller currently completing my degree at Towson University for a BA in Electronic Media and Film. I was born in Norway and raised in Saudi Arabia, England, and Bahrain before settling in Maryland, that global journey shaped my passion for connecting with people through visual storytelling.</p><p style="text-align:center;font-size:18px;line-height:1.8;max-width:800px;margin:0 auto 1.2em;">My experience spans commercial sets, journalism, and freelance productions, with a strong foundation in all stages of production—from pre to post. During a gap year at a Norwegian folkehøgskole, I deepened my love for filmmaking through travel, hands-on learning, and creative collaboration.</p><p style="text-align:center;font-size:18px;line-height:1.8;max-width:800px;margin:0 auto 1.2em;">Outside of film, I find joy in mindfulness, fitness, and crafting, always striving to balance ambition with presence.</p></section><nav style="text-align:center;margin-bottom:20px;">
+<a href="narrative.html" style="background-color:#222;color:white;padding:14px 30px;margin:8px;border-radius:6px;display:inline-block;font-size:24px;text-decoration:none;">Narrative</a>
+<a href="corporate.html" style="background-color:#222;color:white;padding:14px 30px;margin:8px;border-radius:6px;display:inline-block;font-size:24px;text-decoration:none;">Corporate</a>
+<a href="sound.html" style="background-color:#222;color:white;padding:14px 30px;margin:8px;border-radius:6px;display:inline-block;font-size:24px;text-decoration:none;">Sound</a>
+<a href="photos.html" style="background-color:#222;color:white;padding:14px 30px;margin:8px;border-radius:6px;display:inline-block;font-size:24px;text-decoration:none;">Photos</a>
+</nav>
+<section class="resume"><h2>Resume</h2><a href="resume.pdf" style="background:#00aaff;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;">Download Resume</a></section>
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<p style="font-size:20px; font-weight:bold; margin-bottom:10px;">alhaririemir@gmail.com</p>
+<div class="social-icons" style="margin-top: 1.5em;">
+<a href="https://www.linkedin.com/in/emiralhariri" style="margin: 0 10px;" target="_blank">
+<img alt="LinkedIn" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+</a>
+<a href="https://www.youtube.com/@scenesbyemir" style="margin: 0 10px;" target="_blank">
+<img alt="YouTube" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+</a>
+<a href="https://www.instagram.com/emiralhariri" style="margin: 0 10px;" target="_blank">
+<img alt="Instagram" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+</a>
+<a href="https://www.tiktok.com/@scenesbyemir" style="margin: 0 10px;" target="_blank">
+<img alt="TikTok" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+</a>
+</div><div class="contact-images">
+<img alt="Contact 1" src="assets/contact/EMIR-46.jpg"/>
+<img alt="Contact 2" src="assets/contact/EMIR-47.jpg"/>
+</div>
+</section>
 </body>
 </html>

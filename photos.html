@@ -1,40 +1,53 @@
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Photos</title>
-  <style>
-    body { font-family: sans-serif; padding: 2em; background: #fff; }
-    .intro { text-align: center; max-width: 800px; margin: auto; margin-bottom: 2em; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
-    .gallery img { width: 300px; height: auto; object-fit: cover; }
-  </style>
+<title>Photos</title>
+<style>
+    body { background:#111; color:#fff; font-family:sans-serif; padding:2em; }
+    .intro { text-align:center; margin-bottom:2em; }
+    .gallery { display:flex; flex-wrap:wrap; gap:1em; justify-content:center; }
+    .gallery img { width:300px; height:auto; object-fit:cover; }
+  
+.gallery img {
+  width: 400px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+</style>
 </head>
 <body>
-  <div class="intro">
-    <h1>Photos</h1>
-    <p>A collection of behind-the-scenes moments and candid portraits, showcasing my passion for people and production. I love capturing the mood and movement of a set, as well as the subtle moments in between.</p>
-  </div>
-  <div class="gallery">
-    <img src="images/EMIR-36.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-37.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-38.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-39.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-40.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-41.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-42.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-43.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-44.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-45.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-46.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-47.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-48.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-49.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-50.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-51.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-52.jpg" alt="Portfolio Photo">
-    <img src="images/EMIR-53.jpg" alt="Portfolio Photo">
-  </div>
-</body>
+<div class="intro">
+<h1>Photos</h1>
+<p>A collection of behind-the-scenes moments and candid portraits, showcasing my passion for people and production.</p>
+</div>
+<div class="gallery">
+<img alt="Gallery Photo" src="assets/photos/EMIR-36.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-37.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-38.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-39.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-40.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-41.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-42.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-43.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-48.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-49.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-50.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-51.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-52.jpg"/>
+<img alt="Gallery Photo" src="assets/photos/EMIR-53.jpg"/>
+</div>
+<script>
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    if (img.requestFullscreen) {
+      img.requestFullscreen();
+    }
+  });
+});
+</script></body>
 </html>

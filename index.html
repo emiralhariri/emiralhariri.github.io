@@ -1,171 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emir Alhariri – Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emir Alhariri Portfolio</title>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #111;
-      color: white;
-    }
-    .sidebar {
-      width: 120px;
-      background: #1a1a1a;
-      position: fixed;
-      height: 100%;
-      text-align: center;
-      padding-top: 20px;
-    }
-    .sidebar a {
-      display: block;
-      padding: 20px 0;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .sidebar a:hover {
-      background-color: #333;
-    }
-    .sidebar i {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-    .main {
-      margin-left: 120px;
-      padding: 20px;
-    }
-    @media (max-width: 768px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-      }
-      .sidebar a {
-        padding: 10px;
-        font-size: 12px;
-      }
-      .main {
-        margin-left: 0;
-        padding: 15px;
-      }
-      header {
-        padding: 30px 10px;
-      }
-      .profile-pic {
-        width: 160px;
-        height: 160px;
-      }
-      #contact {
-        padding: 40px 15px;
-      }
-    }
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-    }
-    .profile-pic {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
-      margin-bottom: 20px;
-    }
-    #resume-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #444;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-    #resume-button:hover {
-      background-color: #666;
-    }
-    .portfolio-links {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .portfolio-links a {
-      display: inline-block;
-      margin: 10px 20px;
-      padding: 12px 24px;
-      font-size: 16px;
-      text-decoration: none;
-      background-color: #333;
-      color: white;
-      border-radius: 4px;
-    }
-    .portfolio-links a:hover {
-      background-color: #555;
-    }
-    #contact {
-      background-color: #181818;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .social-icons a {
-      font-size: 32px;
-      margin: 0 15px;
-      color: white;
-    }
-    .social-icons a:hover {
-      color: #1da1f2;
-    }
+    body { font-family: Arial; margin: 0; padding: 0; background: #fff; color: #111; }
+    nav { background-color: #333; color: white; padding: 1em; text-align: center; }
+    nav a { color: white; margin: 0 1em; text-decoration: none; }
+    .hero-images { display: flex; width: 100%; }
+    .hero-images img { width: 50%; height: auto; display: block; }
+    .about { text-align: center; padding: 2em; }
+    .contact { padding: 2em; text-align: center; background: #f0f0f0; }
+    .contact-icons { font-size: 1.5em; margin-top: 1em; }
+    .contact-images { display: flex; justify-content: center; gap: 1em; margin-top: 2em; }
+    .contact-images img { width: 45%; height: auto; }
   </style>
 </head>
 <body>
-  <nav class="sidebar">
-    <a href="#home"><i class="fas fa-home"></i><p>Home</p></a>
-    <a href="#about"><i class="fas fa-user"></i><p>About</p></a>
-    <a href="#portfolio"><i class="fas fa-film"></i><p>Portfolio</p></a>
-    <a href="#contact"><i class="fas fa-envelope"></i><p>Contact</p></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="narrative.html">Narrative</a>
+    <a href="photos.html">Photos</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div class="main">
-    <header id="home">
-      <img src="headshot.jpg" alt="Emir Alhariri" class="profile-pic">
-      <h1>Emir Alhariri</h1>
-      <p>Filmmaker & Media Creator</p>
-      <a href="Emir F. Alhariri - Resume .pdf" target="_blank"><button id="resume-button">View Resume</button></a>
-    </header>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m a media creator passionate about filmmaking and visual media. Currently studying Audio and Video Media Production at Howard Community College, I’m transferring to Towson University for a degree in Electronic Media and Film.</p>
-      <p>I’ve worked on commercial, news, and independent projects as a production assistant, camera assistant, and freelance filmmaker. Growing up across Norway, Saudi Arabia, England, and Bahrain shaped my global perspective, and I use film to connect with people and explore different stories.</p>
-      <p>I honed my craft during a gap year at a Folkehøgskole in Norway, focusing on hands-on media production and traveling for industry insights.</p>
-    </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="portfolio-links">
-        <a href="narrative.html">Narrative</a>
-        <a href="sound.html">Sound Design</a>
-        <a href="corporate.html">Corporate</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><i class="fas fa-map-marker-alt"></i> Washington DC–Baltimore Area</p>
-      <p><i class="fas fa-envelope"></i> alhaririemir@gmail.com</p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/emiralhariri/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@scenesbyemir" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.linkedin.com/in/emiralhariri/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.tiktok.com/@scenesbyemir" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </section>
+  <div class="hero-images">
+    <img src="images/EMIR-44.jpg" alt="Intro Photo 1">
+    <img src="images/EMIR-45.jpg" alt="Intro Photo 2">
   </div>
+
+  <section class="about">
+    <h1>Emir Alhariri</h1>
+    <p>Filmmaker, visual storyteller, and media creative exploring narrative and documentary film through cinematography and editing.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>emiralhariri@gmail.com | @emiralhariri</p>
+    <div class="contact-images">
+      <img src="images/EMIR-46.jpg" alt="Contact Photo 1">
+      <img src="images/EMIR-47.jpg" alt="Contact Photo 2">
+    </div>
+  </section>
 </body>
 </html>

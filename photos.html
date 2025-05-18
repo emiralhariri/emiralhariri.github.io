@@ -18,28 +18,48 @@
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+.intro h1 {
+  font-size: 36px;
+}
+.intro p {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 1.5em;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 30px;
+  }
+  .intro p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+}
 </style>
-</head>
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet"/></head>
 <body>
 <div class="intro">
 <h1>Photos</h1>
 <p>A collection of behind-the-scenes moments and candid portraits, showcasing my passion for people and production.</p>
 </div>
 <div class="gallery">
-<img alt="Gallery Photo" src="assets/photos/EMIR-36.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-37.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-38.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-39.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-40.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-41.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-42.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-43.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-48.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-49.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-50.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-51.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-52.jpg"/>
-<img alt="Gallery Photo" src="assets/photos/EMIR-53.jpg"/>
+<a data-lightbox="gallery" href="assets/photos/EMIR-36.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-36.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-37.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-37.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-38.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-38.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-39.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-39.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-40.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-40.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-41.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-41.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-42.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-42.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-43.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-43.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-48.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-48.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-49.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-49.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-50.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-50.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-51.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-51.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-52.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-52.jpg"/></a>
+<a data-lightbox="gallery" href="assets/photos/EMIR-53.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-53.jpg"/></a>
 </div>
 <script>
 document.querySelectorAll('.gallery img').forEach(img => {
@@ -49,5 +69,5 @@ document.querySelectorAll('.gallery img').forEach(img => {
     }
   });
 });
-</script></body>
+</script><script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script></body>
 </html>

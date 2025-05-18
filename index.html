@@ -30,6 +30,80 @@ nav {
 h1, h2 {
   font-size: 34px !important;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
+  h1 {
+    font-size: 36px !important;
+  }
+  nav a {
+    display: block;
+    margin: 10px auto !important;
+    font-size: 20px !important;
+    padding: 12px 20px !important;
+  }
+  .hero-images {
+    flex-direction: column;
+  }
+  .hero-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .contact-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-images img {
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 1em;
+  }
+  .resume a {
+    font-size: 20px !important;
+    padding: 12px 24px !important;
+  }
+  .about p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    padding: 0 5px;
+  }
+  .social-icons img {
+    width: 32px !important;
+  }
+}
+
+/* Smooth transitions */
+a, .resume a, .social-icons img {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button and tile hover effect */
+nav a:hover,
+.resume a:hover,
+.contact a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Social icon hover effect */
+.social-icons img:hover {
+  filter: brightness(2);
+  transform: scale(1.1);
+}
+
+/* Rounded corners and subtle shadows */
+nav a, .resume a, .contact a {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure all sections have adequate vertical spacing */
+section {
+  margin-bottom: 3em;
+}
 </style>
 <title>Emir Frantzen Alhariri | Filmmaker &amp; Storyteller</title><meta content="Explore the creative portfolio of Emir Frantzen Alhariri, a filmmaker and storyteller specializing in narrative, corporate, and sound design productions." name="description"/><meta content="Emir Alhariri, filmmaker, video editor, cinematographer, Towson University, Howard Community College, portfolio, storytelling" name="keywords"/><meta content="Emir Frantzen Alhariri | Filmmaker &amp; Storyteller" property="og:title"/><meta content="Portfolio of filmmaker Emir Frantzen Alhariri. View narrative films, commercial work, sound design, and photography." property="og:description"/><meta content="https://emiralhariri.github.io/your-thumbnail.jpg" property="og:image"/><meta content="https://emiralhariri.github.io" property="og:url"/></head>
 <body>
@@ -46,19 +120,19 @@ h1, h2 {
 <section class="resume"><div style="text-align:center;"><a href="resume.pdf" style="background-color:#222;color:white;padding:14px 30px;margin:8px auto;border-radius:6px;display:inline-block;font-size:24px;text-decoration:none;text-align:center;" target="_blank">Resume</a></div></section>
 <section class="contact" id="contact">
 <h2>Contact</h2>
-<p style="font-size:20px; font-weight:bold; margin-bottom:10px;"><a href="mailto:alhaririemir@gmail.com" style="font-size:20px; color:white; text-decoration:none;">alhaririemir@gmail.com</a></p>
+<p style="font-size:20px; font-weight:bold; margin-bottom:10px;"><a href="mailto:alhaririemir@gmail.com" style="background-color:#222;color:white;padding:14px 30px;margin:8px auto;border-radius:6px;display:inline-block;font-size:20px;text-decoration:none;">alhaririemir@gmail.com</a></p>
 <div class="social-icons" style="margin-top: 1.5em;">
 <a href="https://www.linkedin.com/in/emiralhariri" style="margin: 0 10px;" target="_blank">
-<img alt="LinkedIn" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+<img alt="LinkedIn" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" style="width:36px;filter:invert(1);margin:0 12px;"/>
 </a>
 <a href="https://www.youtube.com/@scenesbyemir" style="margin: 0 10px;" target="_blank">
-<img alt="YouTube" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+<img alt="YouTube" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" style="width:36px;filter:invert(1);margin:0 12px;"/>
 </a>
 <a href="https://www.instagram.com/emiralhariri" style="margin: 0 10px;" target="_blank">
-<img alt="Instagram" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+<img alt="Instagram" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" style="width:36px;filter:invert(1);margin:0 12px;"/>
 </a>
 <a href="https://www.tiktok.com/@scenesbyemir" style="margin: 0 10px;" target="_blank">
-<img alt="TikTok" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" style="width:36px; margin: 0 12px; filter:invert(1);"/>
+<img alt="TikTok" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" style="width:36px;filter:invert(1);margin:0 12px;"/>
 </a>
 </div><div class="contact-images">
 <img alt="Contact 1" src="assets/contact/EMIR-46.jpg"/>

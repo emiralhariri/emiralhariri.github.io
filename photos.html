@@ -1,94 +1,129 @@
-
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-<title>Photos</title>
-<style>
-    body { background:#111; color:#fff; font-family:sans-serif; padding:2em; }
-    .intro { text-align:center; margin-bottom:2em; }
-    .gallery { display:flex; flex-wrap:wrap; gap:1em; justify-content:center; }
-    .gallery img { width:300px; height:auto; object-fit:cover; }
-  
-.gallery img {
-  width: 400px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos · Emir Frantzen Alhariri</title>
 
-.intro h1 {
-  font-size: 36px;
-}
-.intro p {
-  font-size: 20px;
-  line-height: 1.7;
-  max-width: 800px;
-  margin: 0 auto 1.5em;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  .intro h1 {
-    font-size: 30px;
-  }
-  .intro p {
-    font-size: 18px;
-    padding: 0 10px;
-  }
-}
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-/* Larger font adjustments for desktop and mobile */
-.intro h1 {
-  font-size: 42px;
-}
-.intro p {
-  font-size: 24px;
-  line-height: 1.75;
-  max-width: 800px;
-  margin: 0 auto 1.5em;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  .intro h1 {
-    font-size: 34px;
-  }
-  .intro p {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-}
-</style>
-<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet"/></head>
-<body>
-<div class="intro">
-<h1>Photos</h1>
-<p>A collection of behind-the-scenes moments and candid portraits, showcasing my passion for people and production.</p>
-</div>
-<div class="gallery">
-<a data-lightbox="gallery" href="assets/photos/EMIR-36.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-36.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-37.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-37.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-38.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-38.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-39.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-39.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-40.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-40.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-41.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-41.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-42.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-42.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-43.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-43.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-48.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-48.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-49.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-49.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-50.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-50.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-51.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-51.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-52.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-52.jpg"/></a>
-<a data-lightbox="gallery" href="assets/photos/EMIR-53.jpg"><img alt="Gallery Photo" src="assets/photos/EMIR-53.jpg"/></a>
-</div>
-<script>
-document.querySelectorAll('.gallery img').forEach(img => {
-  img.addEventListener('click', () => {
-    if (img.requestFullscreen) {
-      img.requestFullscreen();
+  <style>
+    :root { --bg:#050505; --text:#f5f5f5; --muted:#b0b0b0; --line:#222; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,Inter,sans-serif; line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+
+    .shell { max-width:1120px; margin:0 auto; padding:0 32px 80px; }
+
+    nav { position:sticky; top:0; z-index:10; background:rgba(5,5,5,0.96); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.03); }
+    .nav-inner { max-width:1120px; margin:0 auto; padding:22px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .nav-left { font-size:18px; letter-spacing:0.06em; text-transform:uppercase; font-weight:500; }
+    .nav-right { display:flex; flex-wrap:wrap; gap:20px; font-size:14px; }
+    .nav-right a { opacity:0.75; border-bottom:1px solid transparent; padding-bottom:2px; transition:0.2s; }
+    .nav-right a:hover { opacity:1; border-color:var(--text); }
+    .nav-right a.resume { opacity:1; border-color:var(--line); padding:4px 10px 5px; border-radius:999px; border-width:1px; }
+    .nav-right a.resume:hover { border-color:var(--text); background:#111; }
+
+    .hero { padding:120px 0 40px; border-bottom:1px solid var(--line); }
+    .hero-inner { max-width:900px; }
+    .hero-intro { font-family:"Playfair Display",Georgia,"Times New Roman",serif; font-size:40px; font-weight:500; line-height:1.3; margin:0 0 18px; }
+    .hero-body { font-size:16px; color:var(--muted); max-width:640px; margin:0 0 10px; }
+
+    .section { padding-top:80px; }
+    .section-header { padding-bottom:10px; border-bottom:1px solid var(--line); margin-bottom:40px; }
+    .section-label { font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+    .section-title { font-size:26px; font-weight:500; }
+
+    .stills-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; max-width:900px; }
+    .stills-grid img { border-radius:6px; border:1px solid #161616; height:220px; object-fit:cover; }
+
+    .contact-inner { max-width:900px; }
+    .contact h2 { font-size:24px; font-weight:500; margin:0 0 10px; }
+    .contact a.email { font-size:18px; display:inline-block; margin-bottom:8px; border-bottom:1px solid var(--line); padding-bottom:3px; }
+    .contact a.email:hover { border-color:var(--text); }
+    .contact-note { font-size:14px; color:var(--muted); max-width:460px; margin-top:10px; }
+    .social-row { margin-top:26px; display:flex; flex-wrap:wrap; gap:18px; font-size:14px; }
+    .social-row a { color:var(--muted); border-bottom:1px solid transparent; padding-bottom:2px; transition:0.2s; }
+    .social-row a:hover { color:var(--text); border-color:var(--text); }
+    footer { padding-top:60px; font-size:12px; color:var(--muted); }
+
+    @media (max-width:900px){
+      .shell{padding:0 20px 60px;}
+      .nav-inner{padding:18px 20px;flex-direction:column;align-items:flex-start;}
+      .hero{padding-top:80px;}
+      .hero-intro{font-size:32px;}
+      .stills-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
     }
-  });
-});
-</script><script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script></body>
+    @media (max-width:600px){
+      .stills-grid{grid-template-columns:minmax(0,1fr);}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">Emir Alhariri</div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="narrative.html">Narrative</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="sound.html">Sound</a>
+        <a href="photos.html">Photos</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" target="_blank" class="resume">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-intro">Stills and frames.</h1>
+        <p class="hero-body">
+          A mix of production moments, street scenes, travel, and portraits.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-label">Gallery</div>
+        <div class="section-title">Selected photographs</div>
+      </div>
+
+      <div class="stills-grid">
+        <img src="EMIR-44.jpg" alt="Production still" />
+        <img src="photos/street-basketball.jpg" alt="Basketball court" />
+        <img src="EMIR-45.jpg" alt="Production still" />
+        <img src="photos/travel-church-walk.jpg" alt="Travel still" />
+        <img src="photos/street-balconies.jpg" alt="Street still" />
+        <img src="photos/street-alley-cat.jpg" alt="Cat in alley" />
+        <img src="photos/street-puddle-crossing.jpg" alt="Street crossing" />
+        <img src="photos/portrait-benjamin.jpg" alt="Portrait" />
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-inner">
+        <h2>Contact</h2>
+        <a href="mailto:alhaririemir@gmail.com" class="email">alhaririemir@gmail.com</a>
+        <p class="contact-note">
+          Reach out for portrait sessions, stills on set, and photo collaborations.
+        </p>
+
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/emiralhariri" target="_blank">LinkedIn</a>
+          <a href="https://www.youtube.com/@scenesbyemir" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/emiralhariri" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@scenesbyemir" target="_blank">TikTok</a>
+        </div>
+
+        <footer>
+          © Emir Frantzen Alhariri.
+        </footer>
+      </div>
+    </section>
+  </div>
+</body>
 </html>

@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Emir Frantzen Alhariri | Filmmaker & Storyteller</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emir Frantzen Alhariri</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"/>
-
-  <meta name="description" content="Portfolio of filmmaker and storyteller Emir Frantzen Alhariri. Narrative, corporate, sound design, and visual work."/>
-  <meta name="keywords" content="Emir Alhariri, filmmaker, cinematographer, video editor, Towson University, portfolio"/>
-  <meta property="og:title" content="Emir Frantzen Alhariri | Filmmaker & Storyteller"/>
-  <meta property="og:description" content="View the work of filmmaker Emir Frantzen Alhariri. Narrative films, commercial work, sound design, and photography."/>
-  <meta property="og:image" content="https://emiralhariri.github.io/EMIR-44.jpg"/>
-  <meta property="og:url" content="https://emiralhariri.github.io"/>
+  <!-- Fonts: serif for hero, sans for the rest -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #050509;
-      --bg-soft: #101018;
-      --bg-softer: #141421;
+      --bg: #050505;
       --text: #f5f5f5;
-      --muted: #b3b3c2;
-      --accent: #f6b750;
-      --accent-soft: rgba(246, 183, 80, 0.16);
-      --border-soft: rgba(255, 255, 255, 0.06);
-      --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.7);
-      --radius-lg: 18px;
-      --radius-md: 12px;
-      --radius-sm: 999px;
-      --transition: 0.25s ease;
+      --muted: #b0b0b0;
+      --line: #222;
+      --accent: #f5d37a;
     }
 
     * {
@@ -37,11 +23,10 @@
 
     body {
       margin: 0;
-      padding: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #161623 0, #050509 52%, #020208 100%);
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, Inter, sans-serif;
+      line-height: 1.7;
     }
 
     a {
@@ -54,904 +39,477 @@
       display: block;
     }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      width: 100%;
+    .shell {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 0 18px;
+      padding: 0 32px 80px;
     }
 
-    /* Top nav */
+    /* NAV */
 
-    .site-header {
-      padding: 18px 0 6px;
+    nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(5, 5, 12, 0.96), rgba(5, 5, 12, 0.76), transparent);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+      z-index: 10;
+      background: rgba(5, 5, 5, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     }
 
     .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 24px;
     }
 
-    .logo-mark {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 20% 0, #ffffff 0, #f6b750 35%, #f25a46 72%, #090915 100%);
-      box-shadow: 0 0 28px rgba(246, 183, 80, 0.6);
-    }
-
-    .logo-text {
-      font-size: 14px;
+    .nav-left {
+      font-size: 18px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .pill-link {
-      padding: 7px 14px;
-      border-radius: var(--radius-sm);
-      border: 1px solid transparent;
-      color: var(--muted);
-      background: transparent;
-      cursor: pointer;
-      transition: var(--transition);
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .pill-link:hover {
-      border-color: var(--border-soft);
-      background: rgba(255, 255, 255, 0.02);
-      color: var(--text);
-    }
-
-    .pill-link.primary {
-      background: linear-gradient(120deg, #f6b750, #f58346);
-      color: #050509;
-      font-weight: 600;
-      box-shadow: 0 12px 35px rgba(245, 158, 66, 0.45);
-    }
-
-    .pill-link.primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 45px rgba(245, 158, 66, 0.58);
-    }
-
-    /* Hero */
-
-    .hero {
-      padding: 26px 0 46px;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 26px;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-size: 42px;
-      font-weight: 800;
-      margin: 0 0 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 16px;
-      color: var(--muted);
-      margin-bottom: 18px;
-      max-width: 480px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-
-    .tag {
-      padding: 4px 12px;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 20px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(11, 11, 20, 0.7);
-      color: var(--text);
-      font-size: 14px;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 9px 25px rgba(0, 0, 0, 0.5);
-    }
-
-    .btn span.dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #45ffb3;
-      box-shadow: 0 0 14px rgba(69, 255, 179, 0.8);
-    }
-
-    .btn.primary {
-      background: linear-gradient(118deg, #f6b750, #f58346);
-      color: #050509;
-      font-weight: 600;
-      border-color: transparent;
-    }
-
-    .btn.primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(245, 158, 66, 0.6);
-    }
-
-    .btn.ghost:hover {
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .hero-footnote {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .hero-footnote strong {
-      color: #ffffff;
       font-weight: 500;
     }
 
-    .hero-visual {
-      position: relative;
+    .nav-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 14px;
     }
 
-    .hero-photo-frame {
-      border-radius: var(--radius-lg);
+    .nav-right a {
+      opacity: 0.75;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: 0.2s;
+    }
+
+    .nav-right a:hover {
+      opacity: 1;
+      border-color: var(--text);
+    }
+
+    .nav-right a.resume {
+      opacity: 1;
+      border-color: var(--line);
+      padding: 4px 10px 5px;
+      border-radius: 999px;
+      border-width: 1px;
+    }
+
+    .nav-right a.resume:hover {
+      border-color: var(--text);
+      background: #111;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 120px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 900px;
+    }
+
+    .hero-intro {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0 0 18px;
+    }
+
+    .hero-body {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 0 24px;
+    }
+
+    .hero-availability {
+      font-style: italic;
+      font-size: 15px;
+      color: #d7d7d7;
+    }
+
+    /* HERO IMAGE */
+
+    .hero-image {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-image-frame {
+      max-width: 900px;
+      margin: 0;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: radial-gradient(circle at top, #24243a 0, #090914 46%, #050509 100%);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      isolation: isolate;
+      border-radius: 6px;
+      border: 1px solid #1b1b1b;
     }
 
-    .hero-photo-grid {
+    .hero-image-row {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 6px;
-      height: 100%;
-    }
-
-    .hero-photo-grid img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-chip {
-      position: absolute;
-      left: 16px;
-      bottom: 18px;
-      padding: 8px 13px;
-      border-radius: var(--radius-sm);
-      background: rgba(4, 4, 12, 0.88);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(14px);
-      display: inline-flex;
-      flex-direction: column;
-      gap: 2px;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .hero-chip strong {
-      font-size: 12px;
-      color: #ffffff;
-    }
-
-    .hero-pill {
-      position: absolute;
-      right: 15px;
-      top: 16px;
-      padding: 7px 12px;
-      border-radius: var(--radius-sm);
-      background: var(--accent-soft);
-      border: 1px solid rgba(246, 183, 80, 0.6);
-      font-size: 11px;
-      color: var(--accent);
-    }
-
-    /* Section layout */
-
-    .section {
-      padding: 10px 0 38px;
-    }
-
-    .section-header {
-      margin-bottom: 18px;
-      display: flex;
-      flex-direction: column;
       gap: 4px;
     }
 
-    .section-kicker {
+    .hero-image-row img {
+      height: 420px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* SECTION TITLES */
+
+    .section-header {
+      padding-top: 80px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 40px;
+    }
+
+    .section-label {
       font-size: 12px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
       color: var(--muted);
+      margin-bottom: 8px;
     }
 
     .section-title {
       font-size: 26px;
-      font-weight: 700;
+      font-weight: 500;
     }
 
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 560px;
+    /* FEATURED WORK */
+
+    .video-block {
+      margin-bottom: 56px;
+      max-width: 900px;
     }
 
-    /* About */
-
-    .about-card {
-      background: linear-gradient(130deg, rgba(17, 17, 30, 0.96), rgba(12, 12, 22, 0.96));
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .about-body {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .about-body p {
-      margin: 0 0 8px;
-    }
-
-    .about-tags {
+    .video-heading {
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-      font-size: 11px;
-    }
-
-    .about-tag-pill {
-      padding: 5px 10px;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--muted);
-    }
-
-    /* Featured work */
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      justify-content: space-between;
+      align-items: baseline;
       gap: 16px;
+      margin-bottom: 8px;
     }
 
-    .work-card {
-      background: radial-gradient(circle at top, #242438 0, #101018 38%, #060612 100%);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-soft);
-      padding: 10px 10px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.8);
+    .video-title {
+      font-size: 20px;
+      font-weight: 500;
     }
 
-    .work-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .work-title {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .work-meta {
+    .video-tag {
       font-size: 12px;
       color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .video-description {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
 
     .video-frame {
-      position: relative;
-      border-radius: 10px;
+      border-radius: 6px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border: 1px solid #161616;
       background: black;
     }
 
-    .video-frame::before {
-      content: "";
-      display: block;
-      padding-top: 56.25%;
-    }
-
     .video-frame iframe {
-      position: absolute;
-      inset: 0;
       width: 100%;
-      height: 100%;
+      height: 460px;
       border: none;
     }
 
-    .work-card-footer {
+    /* CATEGORIES */
+
+    .categories {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
     }
 
-    .pill-small {
-      padding: 4px 8px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .link-text {
-      font-size: 11px;
-      color: var(--accent);
-    }
-
-    .work-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(246, 183, 80, 0.55);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
-      transition: var(--transition);
-    }
-
-    /* Portfolio links */
-
-    .tile-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 4px;
-    }
-
-    .portfolio-tile {
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-soft);
-      padding: 10px 11px;
-      background: linear-gradient(145deg, rgba(17, 17, 30, 0.96), rgba(10, 10, 20, 0.96));
-      font-size: 13px;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      cursor: pointer;
-      transition: var(--transition);
-      color: var(--muted);
-    }
-
-    .portfolio-tile span.label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .portfolio-tile strong {
-      color: #ffffff;
+    .cat-link {
       font-size: 14px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid #2a2a2a;
+      color: var(--muted);
+      transition: 0.2s;
     }
 
-    .portfolio-tile:hover {
-      border-color: rgba(246, 183, 80, 0.6);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
-      transform: translateY(-2px);
-    }
-
-    /* Resume and contact */
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      background: linear-gradient(146deg, rgba(16, 16, 28, 0.96), rgba(9, 9, 19, 0.96));
-      padding: 16px 16px 14px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .resume-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 18px;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-size: 14px;
-      margin-top: 8px;
-      cursor: pointer;
-      transition: var(--transition);
+    .cat-link:hover {
+      border-color: var(--text);
       color: var(--text);
+      background: #111;
     }
 
-    .resume-btn:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-1px);
+    /* CONTACT */
+
+    .contact {
+      padding-top: 80px;
     }
 
-    .contact-email {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-size: 14px;
-      background: rgba(0, 0, 0, 0.3);
+    .contact-inner {
+      max-width: 900px;
+    }
+
+    .contact h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0 0 10px;
+    }
+
+    .contact a.email {
+      font-size: 18px;
+      display: inline-block;
       margin-bottom: 8px;
-      cursor: pointer;
-      transition: var(--transition);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
     }
 
-    .contact-email:hover {
-      background: rgba(255, 255, 255, 0.06);
-      transform: translateY(-1px);
+    .contact a.email:hover {
+      border-color: var(--text);
+    }
+
+    .contact-note {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 460px;
+      margin-top: 10px;
     }
 
     .social-row {
+      margin-top: 26px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
+      gap: 18px;
+      font-size: 14px;
     }
 
-    .social-icon-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 11px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(5, 5, 12, 0.9);
+    .social-row a {
+      color: var(--muted);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: 0.2s;
+    }
+
+    .social-row a:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    .contact-images {
+      margin-top: 40px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .contact-images img {
+      flex: 1 1 260px;
+      border-radius: 6px;
+      border: 1px solid #161616;
+      object-fit: cover;
+      height: 220px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding-top: 60px;
       font-size: 12px;
       color: var(--muted);
-      cursor: pointer;
-      transition: var(--transition);
     }
 
-    .social-icon-pill img {
-      width: 18px;
-      height: 18px;
-      filter: invert(1);
-    }
-
-    .social-icon-pill:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-1px);
-    }
-
-    .contact-thumbs {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .contact-thumbs img {
-      border-radius: var(--radius-md);
-      height: 120px;
-      object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Footer */
-
-    .footer {
-      padding: 14px 0 20px;
-      font-size: 11px;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      margin-top: 10px;
-    }
-
-    /* Responsive */
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
+      .shell {
+        padding: 0 20px 60px;
       }
 
-      .hero-visual {
-        order: -1;
-      }
-
-      .hero {
-        padding-top: 18px;
-      }
-
-      .hero-title {
-        font-size: 34px;
-      }
-
-      .section {
-        padding-bottom: 28px;
-      }
-
-      .work-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .tile-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .contact-thumbs img {
-        height: 110px;
-      }
-    }
-
-    @media (max-width: 600px) {
       .nav-inner {
+        padding: 18px 20px;
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .nav-links {
-        justify-content: flex-start;
+      .hero {
+        padding-top: 80px;
       }
 
-      .pill-link {
-        padding: 6px 10px;
-        font-size: 11px;
+      .hero-intro {
+        font-size: 34px;
       }
 
-      .hero-title {
-        font-size: 30px;
+      .hero-image-row img {
+        height: 320px;
       }
 
-      .hero-subtitle {
-        font-size: 14px;
+      .video-frame iframe {
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-image-row {
+        grid-template-columns: 1fr;
       }
 
-      .section-title {
-        font-size: 22px;
+      .hero-image-row img {
+        height: 260px;
       }
 
-      .tile-row {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-photo-frame {
-        border-radius: 14px;
+      .video-heading {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-<div class="page">
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-inner">
-      <div class="logo-mark">
-        <div class="logo-circle"></div>
-        <div class="logo-text">Emir F. Alhariri</div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">Emir Alhariri</div>
+      <div class="nav-right">
+        <a href="narrative.html">Narrative</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="sound.html">Sound</a>
+        <a href="photos.html">Photos</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" target="_blank" class="resume">Resume</a>
       </div>
-      <nav class="nav-links">
-        <a href="narrative.html" class="pill-link">Narrative</a>
-        <a href="corporate.html" class="pill-link">Corporate</a>
-        <a href="sound.html" class="pill-link">Sound</a>
-        <a href="photos.html" class="pill-link">Photos</a>
-        <a href="#contact" class="pill-link">Contact</a>
-        <a href="resume.pdf" target="_blank" class="pill-link primary">Resume</a>
-      </nav>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero -->
-  <main>
+  <div class="shell">
+    <!-- HERO TEXT -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <div class="hero-kicker">Filmmaker · Cinematographer · Editor</div>
-          <h1 class="hero-title">Stories through light, sound, and small details.</h1>
-          <p class="hero-subtitle">
-            I am a Norwegian Turkish filmmaker based in Maryland, studying Electronic Media and Film at Towson University and working across narrative, commercial, and documentary style projects.
-          </p>
-
-          <div class="hero-tags">
-            <div class="tag">Narrative and visual storytelling</div>
-            <div class="tag">Corporate and branded content</div>
-            <div class="tag">Sound design and atmosphere</div>
-          </div>
-
-          <div class="hero-actions">
-            <a href="#work" class="btn primary">
-              <span class="dot"></span>
-              Watch featured work
-            </a>
-            <a href="#portfolio" class="btn ghost">
-              View project categories
-            </a>
-          </div>
-
-          <p class="hero-footnote">
-            Currently based in <strong>Maryland USA</strong> with roots in <strong>Norway, Saudi Arabia, England, and Bahrain</strong>.
-          </p>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-photo-frame">
-            <div class="hero-photo-grid">
-              <img src="EMIR-44.jpg" alt="Portrait of Emir on set 1"/>
-              <img src="EMIR-45.jpg" alt="Portrait of Emir on set 2"/>
-            </div>
-            <div class="hero-pill">Available for freelance shoots and collaborations</div>
-            <div class="hero-chip">
-              <span>Recent work</span>
-              <strong>Night Windows · Mustard · Active Listening PSA</strong>
-            </div>
-          </div>
+      <div class="hero-inner">
+        <h1 class="hero-intro">
+          My name is Emir Frantzen Alhariri. I am a filmmaker and cinematographer focused on intimate, grounded stories told through light, sound, and stillness.
+        </h1>
+        <p class="hero-body">
+          I was born in Norway and grew up between Saudi Arabia, England, Bahrain, and Maryland. That mix of places shaped how I look at people and small details on screen. I am currently studying Electronic Media and Film at Towson University while working on narrative, corporate, and documentary style projects.
+        </p>
+        <div class="hero-availability">
+          I am currently available for freelance shoots, camera assisting, and collaborations.
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">About</div>
-          <h2 class="section-title">Background and approach</h2>
+    <!-- HERO IMAGE STRIP -->
+    <section class="hero-image">
+      <figure class="hero-image-frame">
+        <div class="hero-image-row">
+          <img src="EMIR-44.jpg" alt="Emir portrait one" />
+          <img src="EMIR-45.jpg" alt="Emir portrait two" />
         </div>
-        <div class="about-card">
-          <div class="about-body">
-            <p>
-              I am a filmmaker and storyteller studying for a BA in Electronic Media and Film at Towson University. I grew up between Norway, Saudi Arabia, England, Bahrain, and now Maryland, which shaped how I see people and place on screen.
-            </p>
-            <p>
-              My experience spans commercial sets, journalism, and freelance work. I am comfortable across the full pipeline from pre production planning and camera work to editing and sound. A gap year at a Norwegian folkehøgskole helped me lock in my love for visual storytelling through travel and collaboration.
-            </p>
-            <p>
-              Outside of production I focus on mindfulness and fitness, and I try to bring a calm and present energy to set even when things move fast.
-            </p>
-          </div>
-          <div class="about-tags">
-            <div class="about-tag-pill">Sony and Blackmagic camera systems</div>
-            <div class="about-tag-pill">DaVinci Resolve, Premiere, After Effects</div>
-            <div class="about-tag-pill">Lighting, composition, and mood building</div>
-          </div>
+      </figure>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section>
+      <div class="section-header">
+        <div class="section-label">Featured work</div>
+        <div class="section-title">Selected pieces</div>
+      </div>
+
+      <div class="video-block">
+        <div class="video-heading">
+          <div class="video-title">Night Windows</div>
+          <div class="video-tag">Narrative short</div>
+        </div>
+        <div class="video-description">
+          Edward Hopper inspired short that leans into stillness, shadow, and quiet tension. Focused on mood, framing, and the feeling of looking into someone else’s world.
+        </div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/Yc9BXNKkexc" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-block">
+        <div class="video-heading">
+          <div class="video-title">Mustard</div>
+          <div class="video-tag">Short film</div>
+        </div>
+        <div class="video-description">
+          Short film built from an in class AI script exercise. Used as a sandbox for timing, blocking, and performance while keeping the visuals simple and precise.
+        </div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/hMhCHU_ikK0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-block">
+        <div class="video-heading">
+          <div class="video-title">Active Listening PSA</div>
+          <div class="video-tag">PSA</div>
+        </div>
+        <div class="video-description">
+          A short public service announcement about being present when someone speaks. Built around clean composition, rhythm, and clear communication.
+        </div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/pP0qQ_P_8Fc" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
-    <!-- Featured work -->
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Featured work</div>
-          <h2 class="section-title">Selected pieces</h2>
-          <p class="section-subtitle">
-            A few recent projects that reflect how I think about light, framing, and emotion in different contexts.
-          </p>
-        </div>
+    <!-- CATEGORIES -->
+    <section>
+      <div class="section-header">
+        <div class="section-label">Portfolio</div>
+        <div class="section-title">Explore by category</div>
+      </div>
 
-        <div class="work-grid">
-          <!-- Night Windows -->
-          <a href="https://youtu.be/Yc9BXNKkexc" target="_blank" class="work-card">
-            <div class="work-label">Narrative short</div>
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/Yc9BXNKkexc" allowfullscreen></iframe>
-            </div>
-            <div class="work-title">Night Windows</div>
-            <div class="work-meta">
-              Edward Hopper inspired short that leans on stillness, shadow, and quiet tension.
-            </div>
-            <div class="work-card-footer">
-              <div class="pill-small">Cinematography and direction</div>
-              <div class="link-text">Watch on YouTube</div>
-            </div>
-          </a>
-
-          <!-- Mustard -->
-          <a href="https://youtu.be/hMhCHU_ikK0" target="_blank" class="work-card">
-            <div class="work-label">Short film</div>
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/hMhCHU_ikK0" allowfullscreen></iframe>
-            </div>
-            <div class="work-title">Mustard</div>
-            <div class="work-meta">
-              Short built from an in class AI script exercise, focused on timing, blocking, and performance.
-            </div>
-            <div class="work-card-footer">
-              <div class="pill-small">Direction and edit</div>
-              <div class="link-text">Watch on YouTube</div>
-            </div>
-          </a>
-
-          <!-- Active Listening PSA -->
-          <a href="https://youtu.be/pP0qQ_P_8Fc" target="_blank" class="work-card">
-            <div class="work-label">PSA</div>
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/pP0qQ_P_8Fc" allowfullscreen></iframe>
-            </div>
-            <div class="work-title">Active Listening PSA</div>
-            <div class="work-meta">
-              Short public service announcement built around communication and presence, with clean framing and rhythm.
-            </div>
-            <div class="work-card-footer">
-              <div class="pill-small">Direction, camera, edit</div>
-              <div class="link-text">Watch on YouTube</div>
-            </div>
-          </a>
-        </div>
+      <div class="categories">
+        <a href="narrative.html" class="cat-link">Narrative</a>
+        <a href="corporate.html" class="cat-link">Corporate</a>
+        <a href="sound.html" class="cat-link">Sound</a>
+        <a href="photos.html" class="cat-link">Photos</a>
       </div>
     </section>
 
-    <!-- Portfolio categories -->
-    <section class="section" id="portfolio">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Portfolio</div>
-          <h2 class="section-title">Explore by category</h2>
-          <p class="section-subtitle">
-            Browse more projects by type. Each section has its own selection of pieces and work in progress.
-          </p>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <h2>Contact</h2>
+        <a href="mailto:alhaririemir@gmail.com" class="email">alhaririemir@gmail.com</a>
+        <p class="contact-note">
+          Reach out for freelance projects, assisting on set, or long term collaborations in the DMV area and beyond.
+        </p>
+
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/emiralhariri" target="_blank">LinkedIn</a>
+          <a href="https://www.youtube.com/@scenesbyemir" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/emiralhariri" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@scenesbyemir" target="_blank">TikTok</a>
         </div>
 
-        <div class="tile-row">
-          <a href="narrative.html" class="portfolio-tile">
-            <span class="label">Films</span>
-            <strong>Narrative</strong>
-            <span>Shorts and character driven pieces</span>
-          </a>
-          <a href="corporate.html" class="portfolio-tile">
-            <span class="label">Client work</span>
-            <strong>Corporate</strong>
-            <span>Brand, internal, and event content</span>
-          </a>
-          <a href="sound.html" class="portfolio-tile">
-            <span class="label">Audio</span>
-            <strong>Sound</strong>
-            <span>Sound design and mixes</span>
-          </a>
-          <a href="photos.html" class="portfolio-tile">
-            <span class="label">Stills</span>
-            <strong>Photos</strong>
-            <span>Frames, portraits, and texture</span>
-          </a>
+        <div class="contact-images">
+          <img src="assets/contact/EMIR-46.jpg" alt="On set still one" />
+          <img src="assets/contact/EMIR-47.jpg" alt="On set still two" />
         </div>
       </div>
+
+      <footer>
+        © Emir Frantzen Alhariri. Built on GitHub Pages.
+      </footer>
     </section>
-
-    <!-- Resume and contact -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Connect</div>
-          <h2 class="section-title">Resume and contact</h2>
-        </div>
-
-        <div class="two-col">
-          <!-- Resume -->
-          <div class="card">
-            <h3 style="margin:0 0 6px;font-size:18px;">Resume</h3>
-            <p style="margin:0;font-size:13px;color:var(--muted);">
-              For full credits, experience, and education you can download my CV as a PDF.
-            </p>
-            <a href="resume.pdf" target="_blank" class="resume-btn">
-              View resume (PDF)
-            </a>
-          </div>
-
-          <!-- Contact -->
-          <div class="card">
-            <h3 style="margin:0 0 6px;font-size:18px;">Contact</h3>
-            <a href="mailto:alhaririemir@gmail.com" class="contact-email">
-              alhaririemir@gmail.com
-            </a>
-            <p style="margin:0;font-size:13px;color:var(--muted);">
-              Reach out for freelance work, assisting, or collaborations in the DMV area and beyond.
-            </p>
-
-            <div class="social-row">
-              <a href="https://www.linkedin.com/in/emiralhariri" target="_blank" class="social-icon-pill">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"/>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://www.youtube.com/@scenesbyemir" target="_blank" class="social-icon-pill">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"/>
-                <span>YouTube</span>
-              </a>
-              <a href="https://www.instagram.com/emiralhariri" target="_blank" class="social-icon-pill">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"/>
-                <span>Instagram</span>
-              </a>
-              <a href="https://www.tiktok.com/@scenesbyemir" target="_blank" class="social-icon-pill">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"/>
-                <span>TikTok</span>
-              </a>
-            </div>
-
-            <div class="contact-thumbs">
-              <img src="assets/contact/EMIR-46.jpg" alt="On set still 1"/>
-              <img src="assets/contact/EMIR-47.jpg" alt="On set still 2"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    Built and hosted on GitHub Pages. All work © Emir Frantzen Alhariri.
-  </footer>
-</div>
+  </div>
 </body>
 </html>

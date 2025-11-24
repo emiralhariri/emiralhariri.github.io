@@ -110,18 +110,22 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
       font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .pill-link {
-      padding: 7px 16px;
+      padding: 7px 14px;
       border-radius: var(--radius-sm);
       border: 1px solid transparent;
       color: var(--muted);
       background: transparent;
       cursor: pointer;
       transition: var(--transition);
+      font-size: 13px;
+      white-space: nowrap;
     }
 
     .pill-link:hover {
@@ -273,14 +277,6 @@
     .hero-photo-grid img {
       height: 100%;
       object-fit: cover;
-    }
-
-    .hero-photo-grid img:first-child {
-      border-bottom-left-radius: 0;
-    }
-
-    .hero-photo-grid img:last-child {
-      border-top-right-radius: 0;
     }
 
     .hero-chip {
@@ -663,16 +659,16 @@
 
     @media (max-width: 600px) {
       .nav-inner {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .nav-links {
-        gap: 6px;
+        justify-content: flex-start;
       }
 
       .pill-link {
-        padding: 6px 12px;
+        padding: 6px 10px;
         font-size: 11px;
       }
 
@@ -684,7 +680,6 @@
         font-size: 14px;
       }
 
-      .videos h1,
       .section-title {
         font-size: 22px;
       }
@@ -709,8 +704,10 @@
         <div class="logo-text">Emir F. Alhariri</div>
       </div>
       <nav class="nav-links">
-        <a href="#work" class="pill-link">Work</a>
-        <a href="#portfolio" class="pill-link">Portfolio</a>
+        <a href="narrative.html" class="pill-link">Narrative</a>
+        <a href="corporate.html" class="pill-link">Corporate</a>
+        <a href="sound.html" class="pill-link">Sound</a>
+        <a href="photos.html" class="pill-link">Photos</a>
         <a href="#contact" class="pill-link">Contact</a>
         <a href="resume.pdf" target="_blank" class="pill-link primary">Resume</a>
       </nav>
@@ -808,3 +805,153 @@
           <!-- Night Windows -->
           <a href="https://youtu.be/Yc9BXNKkexc" target="_blank" class="work-card">
             <div class="work-label">Narrative short</div>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/Yc9BXNKkexc" allowfullscreen></iframe>
+            </div>
+            <div class="work-title">Night Windows</div>
+            <div class="work-meta">
+              Edward Hopper inspired short that leans on stillness, shadow, and quiet tension.
+            </div>
+            <div class="work-card-footer">
+              <div class="pill-small">Cinematography and direction</div>
+              <div class="link-text">Watch on YouTube</div>
+            </div>
+          </a>
+
+          <!-- Mustard -->
+          <a href="https://youtu.be/hMhCHU_ikK0" target="_blank" class="work-card">
+            <div class="work-label">Short film</div>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/hMhCHU_ikK0" allowfullscreen></iframe>
+            </div>
+            <div class="work-title">Mustard</div>
+            <div class="work-meta">
+              Short built from an in class AI script exercise, focused on timing, blocking, and performance.
+            </div>
+            <div class="work-card-footer">
+              <div class="pill-small">Direction and edit</div>
+              <div class="link-text">Watch on YouTube</div>
+            </div>
+          </a>
+
+          <!-- Active Listening PSA -->
+          <a href="https://youtu.be/pP0qQ_P_8Fc" target="_blank" class="work-card">
+            <div class="work-label">PSA</div>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/pP0qQ_P_8Fc" allowfullscreen></iframe>
+            </div>
+            <div class="work-title">Active Listening PSA</div>
+            <div class="work-meta">
+              Short public service announcement built around communication and presence, with clean framing and rhythm.
+            </div>
+            <div class="work-card-footer">
+              <div class="pill-small">Direction, camera, edit</div>
+              <div class="link-text">Watch on YouTube</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio categories -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Portfolio</div>
+          <h2 class="section-title">Explore by category</h2>
+          <p class="section-subtitle">
+            Browse more projects by type. Each section has its own selection of pieces and work in progress.
+          </p>
+        </div>
+
+        <div class="tile-row">
+          <a href="narrative.html" class="portfolio-tile">
+            <span class="label">Films</span>
+            <strong>Narrative</strong>
+            <span>Shorts and character driven pieces</span>
+          </a>
+          <a href="corporate.html" class="portfolio-tile">
+            <span class="label">Client work</span>
+            <strong>Corporate</strong>
+            <span>Brand, internal, and event content</span>
+          </a>
+          <a href="sound.html" class="portfolio-tile">
+            <span class="label">Audio</span>
+            <strong>Sound</strong>
+            <span>Sound design and mixes</span>
+          </a>
+          <a href="photos.html" class="portfolio-tile">
+            <span class="label">Stills</span>
+            <strong>Photos</strong>
+            <span>Frames, portraits, and texture</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume and contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Connect</div>
+          <h2 class="section-title">Resume and contact</h2>
+        </div>
+
+        <div class="two-col">
+          <!-- Resume -->
+          <div class="card">
+            <h3 style="margin:0 0 6px;font-size:18px;">Resume</h3>
+            <p style="margin:0;font-size:13px;color:var(--muted);">
+              For full credits, experience, and education you can download my CV as a PDF.
+            </p>
+            <a href="resume.pdf" target="_blank" class="resume-btn">
+              View resume (PDF)
+            </a>
+          </div>
+
+          <!-- Contact -->
+          <div class="card">
+            <h3 style="margin:0 0 6px;font-size:18px;">Contact</h3>
+            <a href="mailto:alhaririemir@gmail.com" class="contact-email">
+              alhaririemir@gmail.com
+            </a>
+            <p style="margin:0;font-size:13px;color:var(--muted);">
+              Reach out for freelance work, assisting, or collaborations in the DMV area and beyond.
+            </p>
+
+            <div class="social-row">
+              <a href="https://www.linkedin.com/in/emiralhariri" target="_blank" class="social-icon-pill">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"/>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.youtube.com/@scenesbyemir" target="_blank" class="social-icon-pill">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"/>
+                <span>YouTube</span>
+              </a>
+              <a href="https://www.instagram.com/emiralhariri" target="_blank" class="social-icon-pill">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"/>
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.tiktok.com/@scenesbyemir" target="_blank" class="social-icon-pill">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"/>
+                <span>TikTok</span>
+              </a>
+            </div>
+
+            <div class="contact-thumbs">
+              <img src="assets/contact/EMIR-46.jpg" alt="On set still 1"/>
+              <img src="assets/contact/EMIR-47.jpg" alt="On set still 2"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Built and hosted on GitHub Pages. All work © Emir Frantzen Alhariri.
+  </footer>
+</div>
+</body>
+</html>

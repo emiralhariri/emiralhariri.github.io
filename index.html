@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emir Frantzen Alhariri</title>
 
-  <!-- Fonts: serif for hero, sans for the rest -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
@@ -14,7 +13,6 @@
       --text: #f5f5f5;
       --muted: #b0b0b0;
       --line: #222;
-      --accent: #f5d37a;
     }
 
     * {
@@ -137,7 +135,7 @@
       color: #d7d7d7;
     }
 
-    /* HERO IMAGE */
+    /* HERO IMAGE STRIP */
 
     .hero-image {
       padding: 60px 0 40px;
@@ -164,10 +162,13 @@
       object-fit: cover;
     }
 
-    /* SECTION TITLES */
+    /* SECTION */
+
+    .section {
+      padding-top: 80px;
+    }
 
     .section-header {
-      padding-top: 80px;
       padding-bottom: 10px;
       border-bottom: 1px solid var(--line);
       margin-bottom: 40px;
@@ -186,7 +187,7 @@
       font-weight: 500;
     }
 
-    /* FEATURED WORK */
+    /* VIDEO BLOCKS */
 
     .video-block {
       margin-bottom: 56px;
@@ -211,12 +212,6 @@
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.14em;
-    }
-
-    .video-description {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
     }
 
     .video-frame {
@@ -256,11 +251,23 @@
       background: #111;
     }
 
-    /* CONTACT */
+    /* STILLS GRID */
 
-    .contact {
-      padding-top: 80px;
+    .stills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 900px;
     }
+
+    .stills-grid img {
+      border-radius: 6px;
+      border: 1px solid #161616;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* CONTACT */
 
     .contact-inner {
       max-width: 900px;
@@ -326,8 +333,6 @@
       height: 220px;
     }
 
-    /* FOOTER */
-
     footer {
       padding-top: 60px;
       font-size: 12px;
@@ -362,6 +367,10 @@
       .video-frame iframe {
         height: 260px;
       }
+
+      .stills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 600px) {
@@ -376,6 +385,10 @@
       .video-heading {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .stills-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -404,10 +417,10 @@
           My name is Emir Frantzen Alhariri. I am a filmmaker and cinematographer focused on intimate, grounded stories told through light, sound, and stillness.
         </h1>
         <p class="hero-body">
-          I was born in Norway and grew up between Saudi Arabia, England, Bahrain, and Maryland. That mix of places shaped how I look at people and small details on screen. I am currently studying Electronic Media and Film at Towson University while working on narrative, corporate, and documentary style projects.
+          I was born in Norway and grew up between Saudi Arabia, England, Bahrain, and Maryland. I am currently studying Electronic Media and Film at Towson University while working on narrative, corporate, and documentary style projects.
         </p>
         <div class="hero-availability">
-          I am currently available for freelance shoots, camera assisting, and collaborations.
+          I am available for freelance shoots, camera assisting, and collaborations.
         </div>
       </div>
     </section>
@@ -416,14 +429,14 @@
     <section class="hero-image">
       <figure class="hero-image-frame">
         <div class="hero-image-row">
-          <img src="EMIR-44.jpg" alt="Emir portrait one" />
-          <img src="EMIR-45.jpg" alt="Emir portrait two" />
+          <img src="EMIR-44.jpg" alt="On set still one" />
+          <img src="EMIR-45.jpg" alt="On set still two" />
         </div>
       </figure>
     </section>
 
     <!-- FEATURED WORK -->
-    <section>
+    <section class="section">
       <div class="section-header">
         <div class="section-label">Featured work</div>
         <div class="section-title">Selected pieces</div>
@@ -433,9 +446,6 @@
         <div class="video-heading">
           <div class="video-title">Night Windows</div>
           <div class="video-tag">Narrative short</div>
-        </div>
-        <div class="video-description">
-          Edward Hopper inspired short that leans into stillness, shadow, and quiet tension. Focused on mood, framing, and the feeling of looking into someone else’s world.
         </div>
         <div class="video-frame">
           <iframe src="https://www.youtube.com/embed/Yc9BXNKkexc" allowfullscreen></iframe>
@@ -447,9 +457,6 @@
           <div class="video-title">Mustard</div>
           <div class="video-tag">Short film</div>
         </div>
-        <div class="video-description">
-          Short film built from an in class AI script exercise. Used as a sandbox for timing, blocking, and performance while keeping the visuals simple and precise.
-        </div>
         <div class="video-frame">
           <iframe src="https://www.youtube.com/embed/hMhCHU_ikK0" allowfullscreen></iframe>
         </div>
@@ -460,9 +467,6 @@
           <div class="video-title">Active Listening PSA</div>
           <div class="video-tag">PSA</div>
         </div>
-        <div class="video-description">
-          A short public service announcement about being present when someone speaks. Built around clean composition, rhythm, and clear communication.
-        </div>
         <div class="video-frame">
           <iframe src="https://www.youtube.com/embed/pP0qQ_P_8Fc" allowfullscreen></iframe>
         </div>
@@ -470,7 +474,7 @@
     </section>
 
     <!-- CATEGORIES -->
-    <section>
+    <section class="section">
       <div class="section-header">
         <div class="section-label">Portfolio</div>
         <div class="section-title">Explore by category</div>
@@ -484,13 +488,32 @@
       </div>
     </section>
 
+    <!-- STILLS GRID -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-label">Stills</div>
+        <div class="section-title">Frames and photographs</div>
+      </div>
+
+      <div class="stills-grid">
+        <img src="EMIR-44.jpg" alt="Production still" />
+        <img src="photos/street-basketball.jpg" alt="Basketball court" />
+        <img src="EMIR-45.jpg" alt="Production still" />
+        <img src="photos/travel-church-walk.jpg" alt="Travel still" />
+        <img src="photos/street-balconies.jpg" alt="Street still" />
+        <img src="photos/street-alley-cat.jpg" alt="Cat in alley" />
+        <img src="photos/street-puddle-crossing.jpg" alt="Street crossing" />
+        <img src="photos/portrait-benjamin.jpg" alt="Portrait" />
+      </div>
+    </section>
+
     <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <section class="section contact" id="contact">
       <div class="contact-inner">
         <h2>Contact</h2>
         <a href="mailto:alhaririemir@gmail.com" class="email">alhaririemir@gmail.com</a>
         <p class="contact-note">
-          Reach out for freelance projects, assisting on set, or long term collaborations in the DMV area and beyond.
+          Reach out for freelance projects, assisting on set, or collaborations in the DMV area and beyond.
         </p>
 
         <div class="social-row">
@@ -501,14 +524,14 @@
         </div>
 
         <div class="contact-images">
-          <img src="assets/contact/EMIR-46.jpg" alt="On set still one" />
-          <img src="assets/contact/EMIR-47.jpg" alt="On set still two" />
+          <img src="assets/contact/EMIR-46.jpg" alt="Contact still one" />
+          <img src="assets/contact/EMIR-47.jpg" alt="Contact still two" />
         </div>
-      </div>
 
-      <footer>
-        © Emir Frantzen Alhariri. Built on GitHub Pages.
-      </footer>
+        <footer>
+          © Emir Frantzen Alhariri. Built on GitHub Pages.
+        </footer>
+      </div>
     </section>
   </div>
 </body>
